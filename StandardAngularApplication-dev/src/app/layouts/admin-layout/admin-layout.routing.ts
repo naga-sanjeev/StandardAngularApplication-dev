@@ -1,0 +1,54 @@
+import { Routes } from '@angular/router';
+
+import { DashboardComponent } from '../../dashboard/dashboard.component';
+import { UserProfileComponent } from '../../user-profile/user-profile.component';
+import { TableListComponent } from '../../table-list/table-list.component';
+import { TypographyComponent } from '../../typography/typography.component';
+import { IconsComponent } from '../../icons/icons.component';
+import { MapsComponent } from '../../maps/maps.component';
+import { NotificationsComponent } from '../../notifications/notifications.component';
+import { UpgradeComponent } from '../../upgrade/upgrade.component';
+import { DropdownsComponent } from 'app/components/materialComponents/Elements/dropdowns/dropdowns.component';
+import { StandardButtonsComponent } from 'app/components/materialComponents/Elements/standard-buttons/standard-buttons.component';
+import { ListGroupsComponent } from 'app/components/materialComponents/Elements/list-groups/list-groups.component';
+import { CardsComponent } from 'app/components/materialComponents/Elements/cards/cards.component';
+import { AccordionComponent } from 'app/components/materialComponents/components/accordion/accordion.component';
+import { CarouselComponent } from 'app/components/materialComponents/components/carousel/carousel.component';
+import { ModalComponent } from 'app/components/materialComponents/components/modal/modal.component';
+import { PaginationComponent } from 'app/components/materialComponents/components/pagination/pagination.component';
+import { ProgressbarComponent } from 'app/components/materialComponents/components/progressbar/progressbar.component';
+import { TabsComponent } from 'app/components/materialComponents/components/tabs/tabs.component';
+import { TooltipandpopoversComponent } from 'app/components/materialComponents/components/tooltipandpopovers/tooltipandpopovers.component';
+import { StepperComponent } from 'app/components/materialComponents/Elements/stepper/stepper.component';
+import { LinechartComponent } from 'app/components/materialComponents/components/linechart/linechart.component';
+import { BarchartComponent } from 'app/components/materialComponents/components/barchart/barchart.component';
+import { PiechartComponent } from 'app/components/materialComponents/components/piechart/piechart.component';
+import { BadgesComponent } from 'app/components/materialComponents/components/badges/badges.component';
+import { ToolbarComponent } from 'app/components/materialComponents/Elements/toolbar/toolbar.component';
+export const AdminLayoutRoutes: Routes = [
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'user-profile', component: UserProfileComponent },
+    { path: 'table-list', component: TableListComponent },
+    { path: 'typography', component: TypographyComponent },
+    { path: 'icons', component: IconsComponent },
+    { path: 'maps', component: MapsComponent },
+    { path: 'notifications', component: NotificationsComponent },
+    { path: 'upgrade', component: UpgradeComponent },
+    { path: 'standard-buttons', component: StandardButtonsComponent },
+    { path: 'dropdowns', component: DropdownsComponent },
+    { path: 'cards', component: CardsComponent },
+    { path: 'listgroups', component: ListGroupsComponent },
+    { path: 'stepper', component: StepperComponent },
+    { path: 'accordion', component: AccordionComponent },
+    { path: 'carousel', component: CarouselComponent },
+    { path: 'modal', component: ModalComponent },
+    { path: 'pagination', component: PaginationComponent },
+    { path: 'progressbar', component: ProgressbarComponent },
+    { path: 'tabs', component: TabsComponent },
+    { path: 'tooltipandpopovers', component: TooltipandpopoversComponent },
+    { path: 'lineChart', component: LinechartComponent },
+    { path: 'barChart', component: BarchartComponent },
+    { path: 'pieChart', component: PiechartComponent },
+    { path: 'badges', component: BadgesComponent },
+    { path: 'toolbar', component: ToolbarComponent },
+];

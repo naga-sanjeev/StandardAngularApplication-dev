@@ -1,0 +1,123 @@
+
+            <form [formGroup]="registerForm">
+                <div class="title">
+                    <h3 mat-dialog-title *ngIf="data.isEditing">Update Profile</h3>
+                    <h3 mat-dialog-title *ngIf="!data.isEditing">Add Profile</h3>
+                </div>
+                 <mat-dialog-content>
+                    <!-- Modal content goes here -->
+                    <mat-form-field appearance="outline">
+                        <mat-label>FirstName</mat-label>
+                        <input type="text" [(ngModel)]="data.firstName" matInput formControlName="firstName">
+                        <mat-error
+                            *ngIf="this.registerForm.get('firstName').touched && this.registerForm.get('firstName').invalid && this.registerForm.get('firstName').errors.required">
+                            First Name is required
+                        </mat-error>
+                        <mat-error
+                            *ngIf="this.registerForm.get('firstName').touched && this.registerForm.get('firstName').invalid && this.registerForm.get('firstName').errors.maxlength">
+                            Maximum length is 50
+                        </mat-error>
+                        <mat-error class="validationtest"
+                            *ngIf="this.registerForm.get('firstName').touched && this.registerForm.get('firstName').invalid && this.registerForm.get('firstName').errors.pattern">
+                            Only alphabets are required
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>LastName</mat-label>
+                        <input type="text" matInput autocomplete="off" [(ngModel)]="data.lastName" formControlName="lastName">
+                        <mat-error
+                            *ngIf="this.registerForm.get('lastName').touched && this.registerForm.get('lastName').invalid && this.registerForm.get('lastName').errors.required">
+                            Last Name is required
+                        </mat-error>
+                        <mat-error
+                            *ngIf="this.registerForm.get('lastName').touched && this.registerForm.get('lastName').invalid && this.registerForm.get('lastName').errors.maxlength">
+                            Maximum length is 50
+                        </mat-error>
+                        <mat-error class="validationtest"
+                            *ngIf="this.registerForm.get('lastName').touched && this.registerForm.get('lastName').invalid && this.registerForm.get('lastName').errors.pattern">
+                            Only alphabets are required
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput autocomplete="off" [(ngModel)]="data.email" formControlName="email">
+                        <mat-error
+                            *ngIf="this.registerForm.get('email').touched && this.registerForm.get('email').invalid && this.registerForm.get('email').errors.required">
+                            Email is required
+                        </mat-error>
+                        <mat-error
+                            *ngIf="this.registerForm.get('email').touched && this.registerForm.get('email').invalid && this.registerForm.get('email').errors.maxlength">
+                            Maximum length is 50
+                        </mat-error>
+                        <mat-error class="validationtest"
+                            *ngIf="this.registerForm.get('email').touched && this.registerForm.get('email').invalid && this.registerForm.get('email').errors.email">
+                            Plaese Enter a valid email address
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>PhoneNumber</mat-label>
+                        <!-- <input type="nummber" matInput   autocomplete="off"  formControlName="phoneNumber"> -->
+                        <input type="number" matInput [(ngModel)]="data.phoneNumber" formControlName="phoneNumber" autocomplete="off">
+                        <mat-error
+                        *ngIf="this.registerForm.get('phoneNumber').touched && this.registerForm.get('phoneNumber').invalid && this.registerForm.get('phoneNumber').errors.required">
+                        Phone Number is required
+                    </mat-error>
+                        <mat-error
+                            *ngIf="this.registerForm.get('phoneNumber').touched && this.registerForm.get('phoneNumber').invalid && this.registerForm.get('phoneNumber').errors.pattern">
+                            Phone Number length sholud be 10
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Alternate Number</mat-label>
+                        <input type="number" matInput [(ngModel)]="data.alternativeNumber" formControlName="alternativeNumber" autocomplete="off">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Age</mat-label>
+                        <input type="number" matInput [(ngModel)]="data.age" formControlName="age" autocomplete="off">
+                        <mat-error
+                            *ngIf="this.registerForm.get('age').touched && this.registerForm.get('age').invalid && this.registerForm.get('age').errors.required">
+                            Age is required
+                        </mat-error>
+                        <mat-error
+                        *ngIf="this.registerForm.get('age').touched && this.registerForm.get('age').invalid && this.registerForm.get('age').errors.pattern">
+                        Age should not be more than 2 digits
+                    </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>UserName</mat-label>
+                        <input type="text" matInput [(ngModel)]="data.userName" autocomplete="off" formControlName="userName">
+                        <mat-error
+                            *ngIf="this.registerForm.get('userName').touched && this.registerForm.get('userName').invalid && this.registerForm.get('userName').errors.required">
+                            UserName is required
+                        </mat-error>
+                        <mat-error
+                            *ngIf="this.registerForm.get('userName').touched && this.registerForm.get('userName').invalid && this.registerForm.get('userName').errors.maxlength">
+                            Maximum length is 50
+                        </mat-error>
+                        <mat-error
+                            *ngIf="this.registerForm.get('userName').touched && this.registerForm.get('userName').invalid && this.registerForm.get('userName').errors.minlength">
+                            Minimum length is 5
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" *ngIf="!data.isEditing">
+                        <mat-label>Password</mat-label>
+                        
+                        <input matInput type="password" formControlName="password">
+                        <mat-error
+                            *ngIf="this.registerForm.get('password').touched && this.registerForm.get('password').invalid && this.registerForm.get('password').errors.required">
+                            Password is required
+                        </mat-error>
+                        
+                    </mat-form-field>
+                  </mat-dialog-content>
+                  <br>
+                
+                  <mat-dialog-actions>
+                     <button type="submit" mat-raised-button color="primary" *ngIf="data.isEditing" (click)= "onUpdateItem()">Update</button>
+                     <button type="submit" mat-raised-button color="primary" *ngIf="!data.isEditing" (click)= "onAddNewItem()">Add</button>
+                    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+                </mat-dialog-actions>
+                
+            
+            </form>
+       

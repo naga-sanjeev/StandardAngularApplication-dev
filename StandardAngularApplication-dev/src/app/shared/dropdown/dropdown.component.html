@@ -1,0 +1,33 @@
+<div class="main-content">
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-md-8">
+            <mat-card >
+              
+              <mat-card-content>
+                
+                <form>
+                    <h4>mat-select</h4>
+                    <mat-form-field>
+                        <mat-label>{{ placeholder }}</mat-label>
+                      <mat-select [(ngModel)]="selectedValue">
+                        <mat-option *ngFor="let option of options" [value]="option.value">
+                          {{ option.label }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                    <p> Selected Car: {{selectedValue}} </p>
+                    
+                  </form>
+                       
+          
+              </mat-card-content>
+           
+              
+            </mat-card>
+          </div>
+          </div>
+
+    </div>
+  </div>

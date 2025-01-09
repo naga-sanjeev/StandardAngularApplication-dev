@@ -1,0 +1,222 @@
+:host {
+  font-family: "Rubik", sans-serif;
+  max-height: calc(100vh - 155px);
+  overflow: auto;
+
+  ::ng-deep .mat-paginator-container {
+    box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%),
+      0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+    margin-bottom: 3rem;
+  }
+
+  .threeDotActions {
+    background-color: #1ba94c !important;
+  }
+
+  td.mat-column-Question {
+    ::ng-deep pre {
+      margin-bottom: 0 !important;
+      background-color: white;
+      padding: 0rem !important;
+    }
+  }
+}
+
+/* Height Adjustments for Mat Table Cells */
+tr.mat-row {
+  height: 45px;
+}
+
+table {
+  height: auto;
+  table-layout: fixed;
+  overflow: auto;
+  width: 100%;
+  box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%),
+    0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+}
+
+.mat-icon {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+th,
+td {
+  padding: 10px 10px 10px 0 !important;
+}
+
+th>i {
+  padding-left: 10px !important;
+}
+
+mat-form-field {
+  width: 40%;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+tr.mat-header-row {
+  height: 56px;
+}
+
+::ng-deep .float-right .mat-form-field-infix {
+  display: flex !important;
+  flex-direction: row;
+}
+
+.action-butttons {
+  width: 1000px;
+}
+
+/* Table Header Styling  */
+.mat-header-cell {
+  background-color: #f44336;
+  color: white;
+  width: auto;
+  font-size: 15px;
+  font-weight: bold;
+  word-wrap: initial;
+  display: table-cell;
+  padding: 0px 10px;
+  line-break: unset;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+th.mat-header-cell:first-of-type,
+td.mat-cell:first-of-type,
+td.mat-footer-cell:first-of-type {
+  padding-left: 24px !important;
+}
+
+::ng-deep .mat-sort-header-arrow {
+  color: white;
+}
+
+.tableActions {
+  margin-bottom: 10px;
+}
+
+.tableActions,
+.rowActions {
+  background-color: #1ba94c !important;
+  font-size: 10px;
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+
+  ::ng-deep .mat-button-wrapper {
+    padding: 2px 0;
+    display: inline-block;
+    line-height: 12px;
+  }
+}
+
+::ng-deep .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #1ba94c !important;
+}
+
+*:disabled {
+  background-color: gray !important;
+  pointer-events: none;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+::ng-deep .highlight-search {
+  color: blue;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: #22c95cfa;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: #22c95cfa;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked.mat-disabled.mat-slide-toggle-bar {
+  background-color: #22c95cfa;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked.mat-disabled.mat-slide-toggle-thumb {
+  background-color: #22c95cfa;
+}
+
+::ng-deep .mat-flat-button.mat-accent,
+.mat-raised-button.mat-accent,
+.mat-fab.mat-accent,
+.mat-mini-fab.mat-accent {
+  background-color: #22c95cfa;
+}
+
+
+.mat-header-cell {
+  width: 50%;
+}
+
+.mat-column-Description,
+.mat-column-Instructions,
+.mat-column-Name,
+.mat-column-ShortName,
+.mat-column-Category {
+  width: 100% !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  flex: 0 0 28% !important;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.mat-column-Attachments {
+  width: 60% !important;
+}
+
+td,
+th {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+::ng-deep .mat-menu-content {
+  display: flex;
+  flex-direction: row;
+  padding-top: 12px !important;
+  padding-left: 3px;
+  padding: right 3px;
+}
+
+.show-all {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.attachment {
+  transform: scale(0.7);
+}
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.dropdown-container {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: flex-end;
+}

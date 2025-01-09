@@ -1,0 +1,24 @@
+
+  <div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <mat-card>
+            <mat-card-content>
+              
+              <div style="text-align:center">
+                <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+                <div><img [src]="url" *ngIf="url"></div>
+                <p>
+                  <input type="file"  (change)="selectFile($event)">
+                  <button mat-raised-button color="primary" (click)="uploadImage()">Upload Image</button>
+                </p>
+              </div>
+              
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  

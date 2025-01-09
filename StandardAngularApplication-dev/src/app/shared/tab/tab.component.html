@@ -1,0 +1,31 @@
+<div class="main-content">
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-md-8">
+            <mat-card >
+              
+              <mat-card-content>
+                <mat-tab-group>
+                  <mat-tab *ngFor="let tab of content[0].TABS_DATAS">
+                    <ng-template mat-tab-label>
+                      {{ tab.label }}
+                    </ng-template>
+                    <div class="tab-content">
+                      <p>{{ tab.content }}</p>
+                    </div>
+                  </mat-tab>
+                </mat-tab-group>
+                    
+          
+              </mat-card-content>
+           
+              
+            </mat-card>
+          </div>
+          </div>
+
+          
+
+    </div>
+  </div>

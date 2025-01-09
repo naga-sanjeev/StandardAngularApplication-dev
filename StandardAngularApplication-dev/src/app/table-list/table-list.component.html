@@ -1,0 +1,11 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <mat-card-content>
+                <app-table [tableData]="this.tableData" [tableColumns]="tableColumns" [dropdownOptions]="dropdownOptions" [tableTitle]="'Table'"
+                 (deleteItem)="onDeleteItem($event)" (updateItem)="openDialog($event)" (addItem)="openDialog()">
+                </app-table>
+            </mat-card-content>
+        </div>
+    </div>
+</div>

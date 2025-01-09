@@ -1,0 +1,143 @@
+table {
+    width: 98%;
+}
+
+.h {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 6.4vh;
+    margin-right: 6.4vh; */
+    --tw-bg-opacity: 1;
+    background-color: rgb(232 242 243 / var(--tw-bg-opacity));
+}
+
+.h1 {
+    padding-top: 1%;
+    padding-bottom: 0.5%;
+    margin-top: 2.5vh;
+}
+
+.h2 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.h3 {
+    font-size: x-large;
+    font-weight: 500;
+    padding-bottom: 4vh;
+}
+
+.h11 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.h12 {
+    --tw-bg-opacity: 2;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+    display: flex;
+    align-items: center;
+    position: sticky;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.h13 {
+    background-color: white;
+    display: flex;
+    border-radius: 2vh;
+}
+
+.addclaim {
+    background-color: #3e969f;
+    color: white;
+}
+
+.box {
+    max-width: 200px;
+    z-index: 1;
+    position: absolute;
+    height: auto;
+    right: 0;
+    margin-right: 5%;
+}
+
+.example-card {
+    z-index: 2;
+    position: initial;
+    top: 0
+}
+
+/* for scrooling */
+.cdk-virtual-scroll-data-source-example .example-viewport {
+    height: 570px;
+    width: 100%;
+    margin-left: 1%;
+}
+
+.cdk-virtual-scroll-data-source-example .example-viewport .cdk-virtual-scroll-content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.cdk-virtual-scroll-data-source-example .example-item {
+    height: auto;
+    writing-mode: horizontal-tb;
+}
+
+mat-card-header {
+    display: flex;
+    font-size: large;
+    font-weight: 500;
+    border-top-right-radius: 2vh;
+    border-top-left-radius: 2vh;
+}
+
+.mat-header-row {
+    flex-wrap: wrap;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.mat-header-cell {
+    color: black;
+    text-align: left;
+    padding: 0.5%;
+}
+
+td.mat-cell {
+    text-align: left;
+    border-bottom-width: 1px;
+    padding: 0.5%;
+}
+:host ::ng-deep.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: #3e969f;
+}
+
+@media (max-width:480px){
+    .h2{
+        display:block ;
+        margin-bottom: 0.5rem;
+    }
+    .h12{
+        display:block ;
+        margin-bottom: 0.5rem;
+        padding-left: 0rem;
+    }
+    .h13{
+        margin-bottom: 0.5rem;
+    }
+}
+@media (max-width:480px){
+    
+}

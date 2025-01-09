@@ -1,0 +1,71 @@
+
+      .mat-card-header {
+        display: flex;
+        flex-direction: column;
+      }
+      .card {
+        width:auto;
+        justify-content: space-around;
+      }
+      .title {
+        display: flex;
+        justify-content:center;
+      }
+      
+      .h3 {
+        padding-top: 1vh;
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btns {
+        background-color: #3E969F;
+        color: white;
+      }
+    
+      .mandatoryColor {
+        color: red
+      }
+    
+    //  for elemenating the number symbol for type=number
+      
+      input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    
+    .mat-toolbar-single-row {
+      height: auto !important;
+      background: transparent;
+      padding: 0;
+    }
+    
+    .mat-form-field {
+      width: 100%;
+    }
+    
+    #fileInput {
+      position: absolute;
+      cursor: pointer;
+      z-index: 10;
+      opacity: 0;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+    }
+    
+    .successSnackBar {
+      // color: #35e661;
+      background-color:#35e661;
+    }
+    .error-SnackBar{
+      background-color:red
+    }
